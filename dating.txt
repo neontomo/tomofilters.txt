@@ -1,9 +1,7 @@
 ! Title: tomofilters - dating
-! Expires: 1 day (update frequency)
+! Expires: 1 day
 ! Description: disable dating websites
 ! Homepage: https://github.com/neontomo/tomofilters.txt
-! License: MIT
-! Version: 1.0
 
 ||hinge.co^$all
 ||tinder.com^$all

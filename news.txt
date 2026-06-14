@@ -1,10 +1,9 @@
 ! Title: tomofilters - news
-! Expires: 1 day (update frequency)
+! Expires: 1 day
 ! Description: disable news websites
 ! Homepage: https://github.com/neontomo/tomofilters.txt
-! License: MIT
-! Version: 1.0
 
+! international news
 ||bbc.com^$all
 ||bbc.co.uk^$all
 ||cnn.com^$all
@@ -21,6 +20,8 @@
 ||cbsnews.com^$all
 ||telegraph.co.uk^$all
 ||independent.co.uk^$all
+
+! Swedish news
 ||dn.se^$all
 ||svd.se^$all
 ||aftonbladet.se^$all

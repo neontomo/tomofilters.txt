@@ -1,10 +1,9 @@
 ! Title: tomofilters - addictive social media
-! Expires: 1 day (update frequency)
+! Expires: 1 day
 ! Description: disable addictive social media websites
 ! Homepage: https://github.com/neontomo/tomofilters.txt
-! License: MIT
-! Version: 1.0
 
+! ban slot machines
 ||twitter.com^$all
 ||x.com^$all
 ||instagram.com^$all
@@ -12,12 +11,8 @@
 ||twitch.com^$all
 ||threads.com^$all
 ||pinterest.com^$all
-
-# Reddit front pages
-
 ||reddit.com/r/popular^$all
 ||reddit.com/news^$all
 
-# disable automatic Reddit translations
-
+! disable automatic Reddit translations
 ||reddit.com^$removeparam=tl

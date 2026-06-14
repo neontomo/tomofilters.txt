@@ -1,0 +1,13 @@
+! Title: tomofilters - yt
+! Expires: 1 day
+! Description: disable yt annoyances
+! Homepage: https://github.com/neontomo/tomofilters.txt
+
+! set grid size
+youtube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-items-per-row: 4 !important;)
+
+! fixes grid size margins
+youtube.com##ytd-rich-item-renderer:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+
+! hide 1080p premium in settings
+youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
