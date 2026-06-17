@@ -1,9 +1,9 @@
-! Title: tomofilters - AI
+! Title: tomofilters - ai
 ! Expires: 1 day
-! Description: disable AI websites
+! Description: disable ai websites
 ! Homepage: https://github.com/neontomo/tomofilters.txt
 
-! AI companies
+! ai companies
 ||chatgpt.com^$all
 ||openai.com^$all
 ||perplexity.com^$all
@@ -18,7 +18,7 @@
 ||deepseek.com^$all
 ||suno.com^$all
 
-! companies that pushed for AI a bit too hard
+! companies that pushed for ai a bit too hard
 ||duolingo.com^$all
 ||spotify.com^$all
 ||grammarly.com^$all
