@@ -8,6 +8,7 @@
 ||openai.com^$all
 ||perplexity.com^$all
 ||grok.com^$all
+||x.ai^$all
 ||gemini.google.com^$all
 ||gemini.google^$all
 ||copilot.cloud.microsoft^$all
