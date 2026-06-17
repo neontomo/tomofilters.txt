@@ -18,6 +18,10 @@ youtube.com###country-code
 ! hide red icon in logo
 youtube.com##.yt-icon svg g:first-child
 
+! hide comment profile pics without shifting the layout
+youtube.com###author-thumbnail:style(opacity: 0; pointer-events: none !important;)
+
+
 ! ------------
 ! New YouTube UI Improved x2
 ! Source: https://www.reddit.com/r/uBlockOrigin/comments/1ontvi5/new_youtube_ui_improved_x2_i_added_fullscreen
