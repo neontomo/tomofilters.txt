@@ -3,24 +3,27 @@
 ! Description: disable yt annoyances
 ! Homepage: https://github.com/neontomo/tomofilters.txt
 
-! set grid size
+! set grid size & readjust grid size margins that break
 youtube.com##ytd-rich-grid-renderer, html:style(--ytd-rich-grid-items-per-row: 4 !important;)
-
-! fixes grid size margins
 youtube.com##ytd-rich-item-renderer:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important)
 
 ! hide 1080p premium in settings
 youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
 
-! hide country code in logo
-youtube.com###country-code
-
-! hide red icon in logo
-youtube.com##.yt-icon svg g:first-child
+! hide country code and red icon in nav logo
+youtube.com###country-code,.yt-icon svg g:first-child
 
 ! hide comment profile pics without shifting the layout
 youtube.com###author-thumbnail:style(opacity: 0; pointer-events: none !important;)
 
+! hide search with voice, AI companion and create buttons in nav
+youtube.com###voice-search-button,#ai-companion-button,ytd-button-renderer yt-button-shape button[aria-label="Create"]
+
+! hide external social links in video description
+youtube.com###social-links yt-button-view-model:has(a[href*="patreon.com"]),#social-links yt-button-view-model:has(a[href*="instagram.com"]),#social-links yt-button-view-model:has(a[href*="facebook.com"])
+
+! hide comment engagement bar (likes, like, dislike, reply)
+youtube.com###comment-container ytd-comment-engagement-bar
 
 ! ------------
 ! New YouTube UI Improved x2
@@ -85,7 +88,7 @@ youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player, .html5-video-play
 ! time display tweaks (theater)
 youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player, .html5-video-player.ytp-fullscreen) .ytp-time-display:style(font-size:14px !important; opacity:0.9 !important;)
 
-! random sh#
+! random sh#t
 ! move the hover seek preview thumbnail closer to the new controls
 youtube.com##.ytp-tooltip.ytp-preview:style(transform: translateY(38px) !important;)
 youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player, .html5-video-player.ytp-fullscreen) .ytp-tooltip.ytp-preview:style(transform:translateY(70px) !important;)
@@ -149,6 +152,7 @@ youtube.com##.ytp-grid-scrollable:remove-class(ytp-grid-scrollable)
 youtube.com##.ytp-endscreen-content
 
 youtube.com##:is(ytd-watch-flexy[theater] .ytp-chrome-bottom, .html5-video-player.ytp-fullscreen .ytp-chrome-bottom):style(transform:translateY(0px) !important;)
+
 ! Fix mute button coloring
 youtube.com##.ytp-volume-icon[data-title-no-tooltip="Unmute"] svg path:style(fill:#FF6969!important;)
 youtube.com##.ytp-volume-icon[data-title-no-tooltip="Mute"] svg path:style(fill:#FF6969!important;)
