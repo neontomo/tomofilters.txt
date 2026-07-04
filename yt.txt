@@ -33,6 +33,12 @@ youtube.com##div.ytFlexibleActionsViewModelAction:has(button[aria-label="Join th
 youtube.com##ytd-rich-item-renderer:has(yt-badge-view-model):has(badge-shape)
 youtube.com##.ytChipBarViewModelChipWrapper:has(button[aria-label="Members only"])
 
+! always show full youtube titles untruncated on startpage
+youtube.com##yt-lockup-metadata-view-model > div > h3 > a.ytLockupMetadataViewModelTitle:style(max-height: none !important; -webkit-line-clamp: none !important;)
+
+! always show full upload timestamp (example: 3 days ago) untruncated on startpage and make text smaller
+youtube.com##span.ytContentMetadataViewModelMetadataText[aria-label*="ago"]:style(overflow: visible !important; white-space: wrap !important;font-size: 11px !important;)
+
 ! ------------
 ! New YouTube UI Improved x2
 ! Source: https://www.reddit.com/r/uBlockOrigin/comments/1ontvi5/new_youtube_ui_improved_x2_i_added_fullscreen
