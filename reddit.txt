@@ -11,8 +11,11 @@
 ! disable Reddit recommended content
 reddit.com##shreddit-post[recommendation-source]
 
-! hide user avatars everywhere (needs `span` in the syntax or else it will hide comments)
-reddit.com##[slot="commentAvatar"]:has(span[avatar]),span[avatar]
+! hide user avatars everywhere without breaking page styling (needs `span` in syntax or it hides comments)
+reddit.com##[slot="commentAvatar"]:has(span[avatar]):style(visibility: hidden; pointer-events: none;)
+
+! hide my own avatar in header while allowing menu opening (needs `span` in syntax or it hides comments)
+reddit.com##reddit-header-action-items span[avatar] image
 
 ! prevent videos from taking too much space in old.reddit.com
 old.reddit.com##iframe.media-embed:style(max-width: 50vw !important;)
@@ -31,8 +34,8 @@ reddit.com##:matches-path(/^/$/) .main-container:remove-class(place-content-betw
 
 ! --HEADER--
 
-! hide header items for advertising, chat, creating posts, inbox
-reddit.com##reddit-header-action-items [data-part="advertise"], reddit-header-action-items [data-part="chat"], reddit-header-action-items [data-part="create"], reddit-header-action-items [data-part="inbox"]
+! hide header items for advertising, chat, creating posts
+reddit.com##reddit-header-action-items [data-part="advertise"], reddit-header-action-items [data-part="chat"], reddit-header-action-items [data-part="create"]
 
 ! hide individual annoying items in user drawer content
 reddit.com###user-drawer-content [source="achievements"][noun="user_drawer"], #user-drawer-content [source="earn"][noun="entrypoint"], #user-drawer-content [source="nav"][noun="premium_menu"]
